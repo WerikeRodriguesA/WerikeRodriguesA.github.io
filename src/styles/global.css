@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background:
+        /* grid vertical */
+        repeating-linear-gradient(to right,
+            rgba(0, 255, 170, 0.05),
+            rgba(0, 255, 170, 0.05) 1px,
+            transparent 1px,
+            transparent 40px),
+        /* grid horizontal */
+        repeating-linear-gradient(to bottom,
+            rgba(0, 255, 170, 0.04),
+            rgba(0, 255, 170, 0.04) 1px,
+            transparent 1px,
+            transparent 40px),
+        /* base gradient */
+        linear-gradient(135deg,
+            #020b08,
+            #041e14,
+            #05291c);
+
+    color: #caffea;
+    font-family: "Courier New", monospace;
+}
+
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* HOME */
+.home {
+    text-align: center;
+    padding: 3rem 4rem;
+    background: rgba(0, 20, 15, 0.4);
+    border: 1px solid rgba(120, 255, 200, 0.15);
+    box-shadow:
+        0 0 25px rgba(90, 255, 180, 0.05),
+        inset 0 0 10px rgba(90, 255, 180, 0.03);
+    backdrop-filter: blur(2px);
+}
+
+
+.home-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.menu li {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    color: #aaffd4;
+}
+
+.menu li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    color: #5cffb0;
+}
+
+.menu li:hover {
+    color: #7dffbd;
+    transform: translateX(6px);
+    text-shadow:
+        0 0 4px rgba(120, 255, 200, 0.8),
+        0 0 12px rgba(120, 255, 200, 0.4);
+}
+
+
+.menu li:hover::before {
+    opacity: 1;
+}
