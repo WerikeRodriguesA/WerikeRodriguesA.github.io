@@ -97,3 +97,47 @@ body {
 .menu li:hover::before {
     opacity: 1;
 }
+
+body {
+    background: var(--bg-dark);
+    color: var(--primary-color);
+    font-family: monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.back-btn {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.progress {
+    background: #222;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    width: 0;
+}
