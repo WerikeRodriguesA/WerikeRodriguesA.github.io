@@ -141,3 +141,10 @@ body {
     background: var(--primary-color);
     width: 0;
 }
+
+footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #d1eeac;
+    text-align: center;
+}
